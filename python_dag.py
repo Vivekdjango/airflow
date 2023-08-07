@@ -7,7 +7,7 @@ def my_func(*op_args):
   print(op_args)
   return op_args[0]
 
-dag = DAG('hello_world', description='Simple tutorial DAG',
+dag = DAG('python_dag', description='Simple tutorial DAG',
           schedule_interval='0 12 * * *',
           start_date=datetime(2019, 7, 12), catchup=False)
 dummy_task      = DummyOperator(task_id='dummy_task', retries=3)
